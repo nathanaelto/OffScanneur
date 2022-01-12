@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/placeholder"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        android:src="@drawable/placeholder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingBottom="35dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="35dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="35dp"
+        android:orientation="vertical"/>
+
+
+    <ImageView
+        android:id="@+id/score_img"
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:src="@drawable/nutri_score_e"
+        app:layout_constraintTop_toBottomOf="@id/placeholder"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="Petits pois et carottes"
+        android:textSize="45px"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/placeholder"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        />
+
+    <TextView
+        android:id="@+id/product_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Cassegrain"
+        android:textSize="40px"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/product_name"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        />
+
+
+    <TextView
+        android:id="@+id/barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/score_img"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        android:textSize="40px"
+        android:layout_marginTop="30dp"
+        tools:text="Code barres : 305468314684354684354354"
+        />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/barcode"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        android:textSize="40px"
+        tools:text="Quantité : 400 g"
+        />
+
+    <TextView
+        android:id="@+id/sold_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/quantity"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        android:textSize="40px"
+        tools:text="Vendu en : France"
+        />
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sold_in"
+
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        android:textSize="40px"
+        android:layout_marginTop="30dp"
+        tools:text="Ingrédients : Petits pois 66%, eau, garniture 2.8% (salede, oignon grelot), sucre, sel, arôme naturel"
+        />
+
+    <TextView
+        android:id="@+id/allergens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ingredients"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        android:textSize="40px"
+        android:layout_marginTop="30dp"
+        tools:text="Substances allergènes : Aucune"
+        />
+
+    <TextView
+        android:id="@+id/additives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/allergens"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        android:textSize="40px"
+        android:layout_marginTop="30dp"
+        tools:text="Additifs : Aucun"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

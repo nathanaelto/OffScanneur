@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_nav"
+    app:startDestination="@id/tab_fiche"
+    >
+
+    <fragment
+        android:id="@+id/tab_fiche"
+        android:name="io.to.offscanneur.fragment.ProductDetailSummaryFragment"
+        android:label="ProductDetailSummaryFragment" />
+
+    <fragment
+        android:id="@+id/tab_nutrition"
+        android:name="io.to.offscanneur.fragment.ProductNutritionFragment"
+        android:label="ProductNutritionFragment" />
+
+    <fragment
+        android:id="@+id/tab_tableau"
+        android:name="io.to.offscanneur.fragment.ProductTableauFragment"
+        android:label="ProductTableauFragment" />
+
+</navigation>

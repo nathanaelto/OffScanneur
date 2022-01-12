@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mon comparateur</string>
+    <string name="main_text">Scanneur de nourriture</string>
+
+    <string name="product_name" translatable="false">Nom</string>
+    <string name="product_brand" translatable="false">Marque</string>
+
+    <string name="product_barcode" translatable="false">Code barres : %1$s</string>
+    <string name="quantity" translatable="false">Quantité : %1$s</string>
+    <string name="sold_in" translatable="false">Vendu en : %1$s</string>
+    <string name="ingredients" translatable="false">Ingrédients : %1$s</string>
+    <string name="allergens" translatable="false">Substances allergènes : %1$s</string>
+    <string name="additives" translatable="false">Additifs : %1$s</string>
+</resources>

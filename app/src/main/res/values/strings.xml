@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">OpenFoodFacts</string>
+    <string name="main_text" translatable="false">Scanned food</string>
+
+    <string name="product_name" translatable="false">Name</string>
+    <string name="product_brand" translatable="false">Brand</string>
+
+    <string name="product_barcode" translatable="false">Barcode : %1$s</string>
+    <string name="quantity" translatable="false">Quantity : %1$s</string>
+    <string name="sold_in" translatable="false">Sold in : %1$s</string>
+    <string name="ingredients" translatable="false">Ingredients : %1$s</string>
+    <string name="allergens" translatable="false">Allergens : %1$s</string>
+    <string name="additives" translatable="false">Additives : %1$s</string>
+</resources>
