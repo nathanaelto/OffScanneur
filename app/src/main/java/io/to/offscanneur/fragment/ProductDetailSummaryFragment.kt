@@ -80,7 +80,7 @@ class ProductDetailSummaryFragment : Fragment() {
     }
 
     fun initImageNutriScore(v: View, nutriScore: String) {
-        var imageView = v.findViewById<ImageView>(R.id.score_img)
+        val imageView = v.findViewById<ImageView>(R.id.score_img)
         when (nutriScore) {
             "A" -> imageView.setImageResource(R.drawable.nutri_score_a)
             "B" -> imageView.setImageResource(R.drawable.nutri_score_b)
