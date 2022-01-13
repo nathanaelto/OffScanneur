@@ -40,8 +40,8 @@ class ProductListFragment : Fragment() {
             val barcode_type = data.getStringExtra("SCAN_RESULT_FORMAT")
             val barcode_value = data.getStringExtra("SCAN_RESULT")
 
-//            val toast = Toast.makeText(requireContext(), barcode_value, Toast.LENGTH_LONG);
-//            toast.show()
+            val toast = Toast.makeText(requireContext(), "$barcode_type : $barcode_value", Toast.LENGTH_LONG);
+            toast.show()
 
             view?.findViewById<TextView>(R.id.scan_result)?.text = "$barcode_type : $barcode_value"
         }
