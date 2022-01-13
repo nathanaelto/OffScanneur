@@ -1,12 +1,15 @@
 package io.to.offscanneur.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -14,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView
 import io.to.models.Ingredient
 import io.to.models.Product
 import io.to.offscanneur.R
-import kotlinx.android.synthetic.main.product_detail_summary.*
 
 class ProductListFragment : Fragment() {
     override fun onCreateView(
@@ -27,6 +29,23 @@ class ProductListFragment : Fragment() {
             container,
             false
         )
+    }
+
+    @SuppressLint("SetTextI18n")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 100 && data != null) {
+
+            val barcode_type = data.getStringExtra("SCAN_RESULT_FORMAT")
+            val barcode_value = data.getStringExtra("SCAN_RESULT")
+
+//            val toast = Toast.makeText(requireContext(), barcode_value, Toast.LENGTH_LONG);
+//            toast.show()
+
+            view?.findViewById<TextView>(R.id.scan_result)?.text = "$barcode_type : $barcode_value"
+        }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -89,6 +108,14 @@ class ProductListFragment : Fragment() {
                 arrayOf()
             ),
         )
+
+        view.findViewById<Button>(R.id.products_start_scan).setOnClickListener {
+
+            val scanner = Intent("com.google.zxing.client.android.SCAN")
+            scanner.putExtra("SCAN_FORMATS ", "EAN_13")
+            startActivityForResult(scanner, 100)
+
+        }
 
         view.findViewById<RecyclerView>(R.id.products_view).run {
             adapter = ListAdapterProduct(
