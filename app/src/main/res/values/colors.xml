@@ -15,9 +15,9 @@
     <color name="toolbar_gradient_end">#81D74E</color>
     <color name="icon_selected">#0EAD69</color>
     <color name="main_navigation_bg">#E63E11</color>
-    <color name="nutrient_level_low">#EBEBEB</color>
-    <color name="nutrient_level_moderate">#85BB2F</color>
-    <color name="nutrient_level_high">#FDCB01</color>
+    <color name="nutrient_level_low">#4CAF50</color>
+    <color name="nutrient_level_moderate">#FFC107</color>
+    <color name="nutrient_level_high">#A30707</color>
     <color name="icon_default">#E63E12</color>
 
     <color name="background_product">#FFFFFFFF</color>

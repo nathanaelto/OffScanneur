@@ -15,6 +15,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.to.models.Ingredient
+import io.to.models.Nutriment
+import io.to.models.NutrimentLevel
 import io.to.models.Product
 import io.to.offscanneur.R
 
@@ -79,7 +81,33 @@ class ProductListFragment : Fragment() {
                     )
                 ),
                 arrayOf(),
-                arrayOf()
+                arrayOf(),
+                arrayOf(
+                    Nutriment(
+                        "0.5",
+                        "1",
+                        "sel",
+                        NutrimentLevel.NUTRIMENT_LEVEL_LOW
+                    ),
+                    Nutriment(
+                        "0.25",
+                        "05",
+                        "poivre",
+                        NutrimentLevel.NUTRIMENT_LEVEL_LOW
+                    ),
+                    Nutriment(
+                        "0.5",
+                        "2.3",
+                        "acides gras saturés",
+                        NutrimentLevel.NUTRIMENT_LEVEL_MODERATE
+                    ),
+                    Nutriment(
+                        "10",
+                        "5.2",
+                        "sucre",
+                        NutrimentLevel.NUTRIMENT_LEVEL_HIGH
+                    )
+                )
             ),
             Product(
                 "Assiette de charcuterie",
@@ -89,6 +117,7 @@ class ProductListFragment : Fragment() {
                 "http",
                 "100 g",
                 "1000 kCal/part",
+                arrayOf(),
                 arrayOf(),
                 arrayOf(),
                 arrayOf(),
@@ -102,6 +131,7 @@ class ProductListFragment : Fragment() {
                 "http",
                 "250 g",
                 "150 kCal/part",
+                arrayOf(),
                 arrayOf(),
                 arrayOf(),
                 arrayOf(),

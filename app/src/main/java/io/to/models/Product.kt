@@ -15,7 +15,8 @@ data class Product(
     val liste_pays: Array<String>,
     val liste_ingredients: Array<Ingredient>,
     val liste_substances: Array<String>,
-    val liste_aditifs: Array<String>
+    val liste_aditifs: Array<String>,
+    val liste_nutriment: Array<Nutriment>
 ) : Parcelable {
 
 

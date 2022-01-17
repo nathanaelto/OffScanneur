@@ -33,7 +33,7 @@ class ProductDetailSummaryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Détails"
+        (activity as AppCompatActivity).supportActionBar?.title = "Fiche du produit"
 
         val detailsFragment: ProductDetailsFragment =
             requireParentFragment().requireParentFragment() as ProductDetailsFragment
