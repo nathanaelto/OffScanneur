@@ -41,8 +41,6 @@ class ProductNutritionFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Nutritions"
-
         val detailsFragment: ProductDetailsFragment =
             requireParentFragment().requireParentFragment() as ProductDetailsFragment
         val product: Product =
@@ -58,8 +56,6 @@ class ProductNutritionFragment: Fragment() {
             )
             layoutManager = GridLayoutManager(requireContext(), 1)
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-
-
         }
 
     }
@@ -78,8 +74,8 @@ class ProductNutritionFragment: Fragment() {
         @SuppressLint("UseCompatLoadingForColorStateLists")
         override fun onBindViewHolder(holder: ListItemNutriment, position: Int) {
 
-
             Log.d("PRODUCT", nutriments[position].formated())
+
             holder.item_nutriment.text = nutriments[position].formated()
             when(nutriments[position].level) {
                 NutrimentLevel.NUTRIMENT_LEVEL_LOW -> {

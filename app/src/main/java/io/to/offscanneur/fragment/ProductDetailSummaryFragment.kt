@@ -33,8 +33,6 @@ class ProductDetailSummaryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Fiche du produit"
-
         val detailsFragment: ProductDetailsFragment =
             requireParentFragment().requireParentFragment() as ProductDetailsFragment
         val product: Product =
@@ -73,10 +71,8 @@ class ProductDetailSummaryFragment : Fragment() {
 
         initImageNutriScore(view, product.nutriscore)
 
-        val url =
-            "https://img.over-blog-kiwi.com/0/98/03/83/20151027/ob_d8e900_cfd0aef3e402736535ecc04b52b70c66-large.jpeg"
         val imageView = view.findViewById<ImageView>(R.id.placeholder)
-        Picasso.get().load(url).into(imageView)
+        Picasso.get().load(product.url).into(imageView)
     }
 
     fun initImageNutriScore(v: View, nutriScore: String) {

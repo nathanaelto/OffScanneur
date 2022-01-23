@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.toolbar))
 
+//        supportActionBar?.setDisplayShowHomeEnabled(true)
+//        supportActionBar?.setLogo(R.drawable.ic_qr_code)
+//        supportActionBar?.setDisplayUseLogoEnabled(true)
 
 
     }

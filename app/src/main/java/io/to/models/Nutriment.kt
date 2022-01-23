@@ -8,7 +8,8 @@ data class Nutriment(
     val quantityServing: String,
     val quantityReference: String,
     val nutriment: String,
-    val level: NutrimentLevel
+    val level: NutrimentLevel,
+    val unit: String
 ): Parcelable {
 
     companion object {

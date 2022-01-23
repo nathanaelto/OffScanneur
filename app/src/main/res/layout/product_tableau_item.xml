@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_right_1"
@@ -19,6 +21,7 @@
         android:orientation="vertical"/>
 
     <io.to.offscanneur.utils.TableCellView
+        android:id="@+id/col1"
         android:padding="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -26,14 +29,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline_right_2"
-        app:layout_constraintBottom_toBottomOf="@id/for100g"
+        tools:text="Sel"
         android:textStyle="bold"
         android:textSize="15sp"
         app:border="right|bottom"
         />
 
     <io.to.offscanneur.utils.TableCellView
-        android:id="@+id/for100g"
+        android:id="@+id/col2"
         android:padding="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -42,13 +45,12 @@
         app:layout_constraintLeft_toRightOf="@id/guideline_right_2"
         android:textSize="15sp"
         android:textAlignment="center"
-        android:text="@string/product_detail_tab_title_1"
-        android:textStyle="bold"
+        tools:text="5 g"
         app:border="right|bottom"
         />
 
     <io.to.offscanneur.utils.TableCellView
-        android:id="@+id/forPart"
+        android:id="@+id/col3"
         android:padding="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -57,17 +59,10 @@
         app:layout_constraintLeft_toRightOf="@id/guideline_right_1"
         android:textSize="15sp"
         android:textAlignment="center"
-        android:text="@string/product_detail_tab_title_2"
-        android:textStyle="bold"
+        tools:text="\?"
         app:border="bottom"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableau_list"
-        app:layout_constraintTop_toBottomOf="@id/forPart"
-        app:layout_constraintLeft_toRightOf="parent"
-        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

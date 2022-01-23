@@ -20,7 +20,7 @@
     <color name="nutrient_level_high">#A30707</color>
     <color name="icon_default">#E63E12</color>
 
-    <color name="background_product">#FFFFFFFF</color>
+    <color name="background_product">#968E8E</color>
 
-    <color name="bottom_bar_default">#FFFFFFFF</color>
+    <color name="bottom_bar_default">#283E3D3D</color>
 </resources>

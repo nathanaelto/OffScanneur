@@ -3,6 +3,7 @@ package io.to.offscanneur.fragment
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,10 +11,12 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import io.to.models.Ingredient
 import io.to.models.Nutriment
 import io.to.models.NutrimentLevel
@@ -59,7 +62,7 @@ class ProductListFragment : Fragment() {
                 "Cassegrain",
                 "3541334646387434",
                 "A",
-                "http",
+                "https://media.istockphoto.com/photos/peas-and-baby-carrot-with-mint-parsley-dressing-picture-id686689994?s=612x612",
                 "400 g",
                 "234 kCal/part",
                 arrayOf("France", "Espagne"),
@@ -87,25 +90,29 @@ class ProductListFragment : Fragment() {
                         "0.5",
                         "1",
                         "sel",
-                        NutrimentLevel.NUTRIMENT_LEVEL_LOW
+                        NutrimentLevel.NUTRIMENT_LEVEL_LOW,
+                        "g"
                     ),
                     Nutriment(
                         "0.25",
                         "05",
                         "poivre",
-                        NutrimentLevel.NUTRIMENT_LEVEL_LOW
+                        NutrimentLevel.NUTRIMENT_LEVEL_LOW,
+                        "g"
                     ),
                     Nutriment(
                         "0.5",
                         "2.3",
                         "acides gras saturés",
-                        NutrimentLevel.NUTRIMENT_LEVEL_MODERATE
+                        NutrimentLevel.NUTRIMENT_LEVEL_MODERATE,
+                        "g"
                     ),
                     Nutriment(
                         "10",
                         "5.2",
                         "sucre",
-                        NutrimentLevel.NUTRIMENT_LEVEL_HIGH
+                        NutrimentLevel.NUTRIMENT_LEVEL_HIGH,
+                        "g"
                     )
                 )
             ),
@@ -114,7 +121,7 @@ class ProductListFragment : Fragment() {
                 "Papa Pig",
                 "3543854643414",
                 "D",
-                "http",
+                "https://media.istockphoto.com/photos/meat-appetizer-platter-with-sausage-and-cold-cuts-above-view-on-a-picture-id1186418590?s=612x612",
                 "100 g",
                 "1000 kCal/part",
                 arrayOf(),
@@ -128,7 +135,7 @@ class ProductListFragment : Fragment() {
                 "Géant vert",
                 "3543854643414",
                 "B",
-                "http",
+                "https://media.istockphoto.com/photos/breakfast-boiled-egg-and-vegetables-picture-id1194610986",
                 "250 g",
                 "150 kCal/part",
                 arrayOf(),
@@ -152,6 +159,7 @@ class ProductListFragment : Fragment() {
                 productList,
                 listener = object : ItemClickListener {
                     override fun onItemClicked(position: Int) {
+                        Log.d("PRODUCT", position.toString())
                         findNavController().navigate(
                             ProductListFragmentDirections.actionListProductFragmentToProductDetailsFragment(
                                 productList[position]
@@ -187,6 +195,8 @@ class ProductListFragment : Fragment() {
             holder.itemView.setOnClickListener {
                 listener.onItemClicked(position)
             }
+
+            Picasso.get().load(products[position].url).into(holder.img_product_item)
         }
 
         override fun getItemCount(): Int {

@@ -11,4 +11,17 @@
     <string name="ingredients" translatable="false">Ingrédients : %1$s</string>
     <string name="allergens" translatable="false">Substances allergènes : %1$s</string>
     <string name="additives" translatable="false">Additifs : %1$s</string>
+
+    <string name="btn_scanner" translatable="false">Scanner un code-barre</string>
+
+    <string name="product_detail_title" translatable="false">Détails</string>
+
+    <string name="product_detail_title_nutrition" translatable="false">Repères nutritionnels pour 100g</string>
+
+    <string name="product_detail_tab_title_1" translatable="false">Pour 100g</string>
+    <string name="product_detail_tab_title_2" translatable="false">Par part</string>
+
+    <string name="bottom_nav_fiche" translatable="false">Fiche</string>
+    <string name="bottom_nav_nutrition" translatable="false">Nutrition</string>
+    <string name="bottom_nav_tableau" translatable="false">Tableau</string>
 </resources>
